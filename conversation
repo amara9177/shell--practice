@@ -1,7 +1,0 @@
-#!/bin/bash
-"PERSON1=Ramesh"
-"PERSON2=Suresh"
-echo"Ramesh::Hi Suresh, How are you? "
-echo"Suresh::Hi Ramesh, im fine.How are you?"
-echo"Ramesh::What are you learning"
-echo"Suresh::Iam learning shell scripting Ramesh"
