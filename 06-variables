@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "please enter USER NAME"
+read -p USER NAME #here USER NAME is variable
+
+echo "USER NAME is: $USER NAME"
