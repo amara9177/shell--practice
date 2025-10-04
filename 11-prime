@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Enter number"
+read NUMBER
+
+if [ $(($NUMBER -le 1)) ]; then
+    echo "Given NUMBER is PRIME NUMBER"
+fi
