@@ -3,4 +3,4 @@
 echo "please enter your USER_NAME"
 read -s USER_NAME # here USER_NAME is variable
 
-echo "USER_NAME entered is:"$USER_NAME"
+echo USER_NAME entered is:"$USER_NAME"
