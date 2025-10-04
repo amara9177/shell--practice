@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter number"
+echo "Enter NUMBER"
 read NUMBER
 
 if [ $(($NUMBER -le 1 )) ]; then
