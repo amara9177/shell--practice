@@ -21,7 +21,8 @@ else
 fi
 }
 
-dnf install mysql
+dnf installed mysql
+# install if it is not found
 if [ $? -ne 0 ];then
     dnf install mysql -y
     VALIDATE $? "mysql"
