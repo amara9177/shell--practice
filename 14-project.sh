@@ -29,15 +29,9 @@ else
 fi
 
 dnf installed nginx 
-if [$? -ne 0 ];then
+if [ $? -ne 0 ];then
     dnf install nginx -y
     VALIDATE $? "nginx"
 else
     echo  -e "nginx is already exist...$Y skipping $N"
 fi
-
-dnf install mysql -y
-VALIDATE $? "my sql"
-
-dnf install nginx -y
-VALIDATE $? "nginx"
