@@ -9,10 +9,10 @@ N="\e[0m"
 
 if [ $USERID -ne 0 ];then
     echo  -e "ERROR:please run the script with root privilege"
-    exit 1
+    exit 1 # failure is other than 0
 fi
 
-VALIDATE(){
+VALIDATE(){ # functions receive inputs through args just like shell cript
 if [ $1 -ne 0 ];then
     echo  -e "installing $2 .... $R Failure $N"
     exit 1
