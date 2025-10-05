@@ -21,7 +21,7 @@ else
 fi
 
 dnf installed mysql
-if [$? -ne 0 ];then
+if [ $? -ne 0 ];then
     dnf install mysql -y
     VALIDATE $? "mysql"
 else
@@ -37,7 +37,7 @@ else
 fi
 
 dnf install mysql -y
-validate $? "my sql"
+VALIDATE $? "my sql"
 
 dnf install nginx -y
-validate $? "nginx"
+VALIDATE $? "nginx"
