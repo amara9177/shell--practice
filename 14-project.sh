@@ -12,13 +12,14 @@ if [ $USERID -ne 0 ];then
     exit 1
 fi
 
-VALIDATE()
+VALIDATE(){
 if [ $1 -ne 0 ];then
-    echo  -e "Error:installing $2 .... $R Failure $N"
+    echo  -e "installing $2 .... $R Failure $N"
     exit 1
 else
-    echo -e  "ERROR:installing $2 .... $G Success $N"
+    echo -e "installing $2 .... $G Success $N"
 fi
+}
 
 dnf installed mysql
 if [ $? -ne 0 ];then
