@@ -12,3 +12,4 @@ if [ $? -ne 0 ];then
     echo "ERROR:installing mysql is Failure"
 else
     echo "ERROR:installing mysql is Success"
+fi
