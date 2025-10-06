@@ -18,10 +18,10 @@ fi
 
 VALIDATE(){
     if [ $1 -ne 0 ];then
-        echo " installing $2...$R Failure $N"
+        echo -e " installing $2...$R Failure $N"
         exit 1
     else
-        echo  " installation $2...$G Success $N"
+        echo -e " installation $2...$G Success $N"
     fi
 }
 
@@ -36,9 +36,9 @@ fi
 dnf list installed nginx &>>$LOG_FILE
 if [ $? -ne 0 ];then
     dnf install nginx -y &>>$LOG_FILE
-    VALIDATE $? "Nginx"
+    VALIDATE $? "nginx"
 else
-    echo -e "Nginx already exist...$Y skipping $N"
+    echo -e "nginx already exist...$Y skipping $N"
 fi
 
 dnf list installed python3 &>>$LOG_FILE
@@ -46,5 +46,5 @@ dnf list installed python3 &>>$LOG_FILE
     dnf install python3 -y &>>$LOG_FILE
     VALIDATE $? "python3"
 else
-    echo  -e "Nginx already exist...$Y skipping $N"
+    echo  -e "python03 already exist...$Y skipping $N"
 fi
