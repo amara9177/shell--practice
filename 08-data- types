@@ -1,12 +1,7 @@
 #!/bin/bash
-
-NUMBER1=100
+NUMBE1=100
 NUMBER2=200
 
 SUM=$(($NUMBER1+$NUMBER2))
 
-echo "SUM is: ${SUM}"
-
-LEADERS=("hari" "amara")
-
-echo "All leaders: ${LEADERS[@]}"
+echo "SUM is {$SUM}"
