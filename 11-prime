@@ -3,6 +3,8 @@
 echo "Enter NUMBER"
 read NUMBER
 
-if [ $NUMBER -le 1 ]; then
+if [ $NUMBER -eq 1 ]; then
     echo "Given NUMBER is PRIME NUMBER"
+else
+    echo "Given Number is not PRIME NUMBER "
 fi
