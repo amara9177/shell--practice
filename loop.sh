@@ -30,7 +30,15 @@ VALIDATE(){ #in functions values pass as org we are validating here so that we n
     fi
 }
 #$@ all variable scripting in package
-for package in $@
+for package in $@  #no need to give expression ()
 do
-    echo "package is: $package"
+    dnf list installed $package &>>$LOG_FILE
+
+    if [ $? -ne 0 ];then
+        dnf install $package -y &>>$LOG_FILE
+        VALIDATE $? "$package" #y not $package -here u didnot define package specifically any where so need to define like "package:$package"
+    else
+        echo -e "$package already exist...$Y skipping $N"
+    fi
 done
+#package is nothing but installations-mysql,nginx,python
