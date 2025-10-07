@@ -1,10 +1,5 @@
 #!/bin/bash
 
-for i in {1..10}
-do
-    echo $i
-done
-
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
